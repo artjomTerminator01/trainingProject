@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../styles/style.css" />
+  </head>
+
+  <body>
+    <h1>Meal plans</h1>
+    <div>
+      <h2>Input your info fo we can choose the best diet for you</h2>
+    </div>
+
+    <form action="" onsubmit="event.preventDefault(); pConsole();">
+      <!-- label html element -->
+      <label for="name">name</label>
+      <!-- placeholder tag -->
+      <input type="text" id="name" placeholder="your name" /><br /><br />
+
+      <label for="weight">weight</label>
+      <input
+        type="text"
+        id="weight"
+        placeholder="your weight in kg"
+      /><br /><br />
+
+      <label for="height">height</label>
+      <input
+        type="text"
+        id="height"
+        placeholder="your height in cm"
+      /><br /><br />
+
+      <label for="male">male</label>
+      <input type="radio" id="gender" name="gender" value="male" />
+
+      <label for="female">female</label>
+      <input type="radio" id="gender" name="gender" value="female" />
+      <div>
+        <input type="checkbox" id="sport" name="doing sports" value="sport" />
+        <label for="sport"> I do sports</label><br />
+      </div>
+      <div>
+        <input type="checkbox" id="dog" name="has a dog" value="dog" />
+        <label for="dog"> I have a dog</label><br />
+      </div>
+
+      <button type="submit">Submit</button>
+    </form>
+    <div>
+      <a href="about.html">About us</a>
+    </div>
+    <a href="index.html">Back to main page</a>
+    <script src="../scripts/scriptMealPlans.js"></script>
+  </body>
+</html>
