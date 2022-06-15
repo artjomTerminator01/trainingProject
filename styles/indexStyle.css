@@ -1,0 +1,200 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    background-color: white;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  h1{
+    font-size: 300%;
+    text-align: center;
+  }
+
+  p.indent{
+    font-size: 150%;
+    text-align: center;
+    position: absolute;
+    left: 29%;
+    width: 800px;
+    height: 500px;
+  }
+
+  .hero-image {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://preview.redd.it/99400v5s58p81.jpg?auto=webp&s=4ab3ffc9e319381c417ffaa53bce9acfa6437478");
+    height: 55%;
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+  }
+  
+  .hero-text {
+    font-size: 400%;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+  }
+
+    button.form {
+    background-color: rgb(47, 90, 54);
+    color: white;
+    padding: 32px 64px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 32px;
+    position: relative;
+    margin: 0;
+    position: absolute;
+    left: 50%;
+    top: 80%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+
+
+
+  .users-box{
+    width: 1500px;
+    height: 500px;
+    margin: 20px auto;
+    position: absolute;
+    top: 100%;
+    left: 10%;
+  }
+
+  .price-box{
+    width: 700px;
+    height: 300px;
+    margin: 20px auto;
+    position: absolute;
+    top: 139%;
+    left: 57%;
+  }
+
+
+
+  .statham{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    position: relative;
+    left: 40%;
+  }
+
+  .muslce{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    position: relative;
+    left: 20%;
+  }
+
+  .obama{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    position: relative;
+  }
+
+  .obama-text{
+    width: 200px;
+    height: 300px;
+    position: absolute;
+    left: 15%;
+    top: 10%;
+  }
+
+  .muscle-text{
+    width: 200px;
+    height: 300px;
+    position: absolute;
+    left: 49%;
+    top: 10%;
+  }
+
+  .statham-text{
+    width: 200px;
+    height: 300px;
+    position: absolute;
+    left: 82.5%;
+    top: 10%;
+  }
+
+  .subscription{
+    font-family: verdana;
+    position: absolute;
+    left: 5%;
+    top: 133.5%;
+    font-size: 300%;
+  }
+
+  .price{
+    color: rgb(47, 90, 54);
+    font-family: verdana;
+    position: absolute;
+    left: 37%;
+    top: 130%;
+    font-size: 600%;
+  }
+
+  .sub-contains{
+    color: rgb(47, 90, 54);
+    font-family: verdana;
+    position: absolute;
+    left: 63%;
+    top: 133.5%;
+    font-size: 200%;
+  }
+
+  .meals{
+    font-family: verdana;
+    font-size: 150%;
+    position: relative;
+  }
+
+  .consultations{
+    font-family: verdana;
+    font-size: 150%;
+    position: relative;
+    top: 30px;
+  }
+
+  .pdf-box{
+    width: 1500px;
+    height: 500px;
+    margin: 20px auto;
+    position: absolute;
+    top: 175%;
+    left: 10%;
+  }
+
+  .pdf{
+    position: relative;
+    bottom: 50px;
+  }
+
+  .example{
+    color: rgb(47, 90, 54);
+    font-family: verdana;
+    font-size: 200%;
+    position: relative;
+    top: -100px;
+    left: 80px;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+  
