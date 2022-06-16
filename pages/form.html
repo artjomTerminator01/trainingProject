@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../styles/style.css" />
+    <link rel="stylesheet" href="../styles/formStyle.css" />
+  </head>
+
+  <body>
+    <div class="navigation" id="navigation">
+      <a class="form-button" href="index.html">
+        <button class="form">MAIN PAGE</button>
+      </a>
+
+      <!-- <div>
+        <a href="about.html">About us</a>
+      </div> -->
+    </div>
+    <div class="container">
+      <div class="user-form">
+        <p>Input your info so we can choose the best diet for you</p>
+        <form action="" onsubmit="event.preventDefault(); pConsole();">
+          <div class="form-input">
+            <label for="name">name</label>
+            <input type="text" id="name" placeholder="your name" name="name" />
+          </div>
+
+          <div class="form-input">
+            <label for="email">email</label>
+            <input
+              type="text"
+              id="email"
+              placeholder="your email"
+              name="email"
+            />
+          </div>
+
+          <div class="form-input">
+            <label for="age">age</label>
+            <input type="number" id="age" placeholder="your age" name="age" />
+          </div>
+
+          <div class="form-input">
+            <label for="weight">weight</label>
+            <input
+              type="number"
+              id="weight"
+              placeholder="your weight in kg"
+              name="weight"
+            />
+            <label for="weight">kg</label>
+          </div>
+          <div class="form-input">
+            <label for="height">height</label>
+            <input
+              type="number"
+              id="height"
+              placeholder="your height in cm"
+              name="height"
+            />
+            <label for="height">cm</label>
+          </div>
+          <div class="form-input">
+            <label for="male">male</label>
+            <input type="radio" id="gender" name="gender" value="male" />
+
+            <label for="female">female</label>
+            <input type="radio" id="gender" name="gender" value="female" />
+          </div>
+
+          <div class="form-input">
+            <p class="activity-title">WEEK ACTIVE DAYS</p>
+            <label for="0-2">0-2</label>
+            <input type="radio" id="activity" name="active" value="0-2" />
+
+            <label for="3-5">3-5</label>
+            <input type="radio" id="activity" name="active" value="3-5" />
+
+            <label for="6-7">6-7 </label>
+            <input type="radio" id="activity" name="active" value="6-7" />
+          </div>
+
+          <div class="form-input">
+            <input
+              type="checkbox"
+              id="sport"
+              name="doing sports"
+              value="sport"
+            />
+            <label for="sport"> I do sports</label>
+
+            <input type="checkbox" id="dog" name="has a dog" value="dog" />
+            <label for="dog"> I have a dog</label>
+          </div>
+          <button class="submit-button" type="submit">Submit</button>
+        </form>
+      </div>
+
+      <img
+        src="https://www.biography.com/.image/ar_1:1%2Cc_fill%2Ccs_srgb%2Cfl_progressive%2Cq_auto:good%2Cw_1200/MTE4MDAzNDEwNzg5ODI4MTEw/barack-obama-12782369-1-402.jpg"
+      />
+    </div>
+
+    <script src="../scripts/scriptForm.js"></script>
+  </body>
+</html>
