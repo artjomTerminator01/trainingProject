@@ -102,22 +102,6 @@ p.indent {
 
 }
 
-/* .statham {
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
-  position: relative;
-  left: 40%;
-}
-
-.muslce {
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
-  position: relative;
-  left: 20%;
-} */
-
 .obama {
   width: 200px;
   height: 200px;
@@ -131,30 +115,7 @@ p.indent {
   margin-right: 16px;
 
 }
-/* 
-.obama-text {
-  width: 200px;
-  height: 300px;
-  position: absolute;
-  left: 15%;
-  top: 10%;
-}
 
-.muscle-text {
-  width: 200px;
-  height: 300px;
-  position: absolute;
-  left: 49%;
-  top: 10%;
-}
-
-.statham-text {
-  width: 200px;
-  height: 300px;
-  position: absolute;
-  left: 82.5%;
-  top: 10%;
-} */
 
 .subscription {
   font-family: verdana;

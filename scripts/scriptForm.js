@@ -56,11 +56,11 @@ function pConsole() {
     alert("Choose your gender!");
   }
 
-  if (document.querySelector('input[name="activity"]:checked')) {
-    console.log("Activity: " + activity.value);
-  } else {
-    alert("Choose activity!");
-  }
+  // if (document.querySelector('input[name="activity"]:checked')) {
+  //   console.log("Activity: " + activity.value);
+  // } else {
+  //   alert("Choose activity!");
+  // }
 
   let doesSports = document.getElementById("sport");
   if (doesSports.checked == true) {

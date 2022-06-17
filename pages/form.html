@@ -12,24 +12,21 @@
   <body>
     <div class="navigation" id="navigation">
       <a class="form-button" href="index.html">
-        <button class="form">MAIN PAGE</button>
+        <button class="form">BACK TO MAIN PAGE</button>
       </a>
-
-      <!-- <div>
-        <a href="about.html">About us</a>
-      </div> -->
     </div>
     <div class="container">
       <div class="user-form">
-        <p>Input your info so we can choose the best diet for you</p>
-        <form action="" onsubmit="event.preventDefault(); pConsole();">
+        <p class="text">Input your info so we can choose the best diet for you</p>
+        <p class="text">A diet will be calculated based on your physiology</p>
+        <form action="result.html" method="GET" onsubmit="pConsole();">
           <div class="form-input">
-            <label for="name">name</label>
+            <label class="form-label "for="name">name</label>
             <input type="text" id="name" placeholder="your name" name="name" />
           </div>
 
           <div class="form-input">
-            <label for="email">email</label>
+            <label class="form-label for="email">email</label>
             <input
               type="text"
               id="email"
@@ -39,35 +36,35 @@
           </div>
 
           <div class="form-input">
-            <label for="age">age</label>
+            <label class="form-label for="age">age</label>
             <input type="number" id="age" placeholder="your age" name="age" />
           </div>
 
           <div class="form-input">
-            <label for="weight">weight</label>
+            <label class="form-label for="weight">weight</label>
             <input
               type="number"
               id="weight"
               placeholder="your weight in kg"
               name="weight"
             />
-            <label for="weight">kg</label>
+            <label class="form-label for="weight">kg</label>
           </div>
           <div class="form-input">
-            <label for="height">height</label>
+            <label class="form-label for="height">height</label>
             <input
               type="number"
               id="height"
               placeholder="your height in cm"
               name="height"
             />
-            <label for="height">cm</label>
+            <label class="form-label for="height">cm</label>
           </div>
           <div class="form-input">
-            <label for="male">male</label>
+            <label class="form-label for="male">male</label>
             <input type="radio" id="gender" name="gender" value="male" />
 
-            <label for="female">female</label>
+            <label class="form-label for="female">female</label>
             <input type="radio" id="gender" name="gender" value="female" />
           </div>
 
@@ -90,10 +87,10 @@
               name="doing sports"
               value="sport"
             />
-            <label for="sport"> I do sports</label>
+            <label class="form-label" for="sport"> I do sports</label>
 
             <input type="checkbox" id="dog" name="has a dog" value="dog" />
-            <label for="dog"> I have a dog</label>
+            <label class="form-label" for="dog"> I have a dog</label>
           </div>
           <button class="submit-button" type="submit">Submit</button>
         </form>

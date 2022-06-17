@@ -27,6 +27,7 @@
     padding: 12px 12px;
   }
 
+
   .submit-button{
     background-color: rgb(47, 90, 54);
     color: white;
@@ -68,9 +69,16 @@
     display: block;
   }
 
-  .activity-title{
+
+
+  .form-label, .activity-title{
     color: rgb(47, 104, 57);
     font-family: verdana;
-    font-weight: 400;
+    font-weight: bold;
+  }
 
+  .text{
+    color: rgb(93, 107, 96);
+    font-family: verdana;
+    font-weight: bold;
   }
