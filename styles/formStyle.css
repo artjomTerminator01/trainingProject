@@ -67,6 +67,7 @@
   .form-input{
     margin-top: 12px;
     display: block;
+    text-align: center;
   }
 
 
@@ -82,3 +83,22 @@
     font-family: verdana;
     font-weight: bold;
   }
+
+.error-active, .name-error-active {
+  padding: 0.3em;
+  width: 30%;
+  font-size: 80%;
+  font-family: Verdana;
+  color: white;
+  background-color: #900;
+  opacity: 0.3;
+  border-radius: 6px;
+  margin: auto;
+  display: block;
+}
+
+
+
+
+
+  

@@ -1,113 +1,61 @@
-// When the user scrolls the page, execute myFunction
+import { hasNumber } from "./scriptFormsUtils.js";
+
 window.onscroll = function () {
-  myFunction();
-};
-
-// Get the header
-var header = document.getElementById("navigation");
-
-// Get the offset position of the navbar
-var sticky = header.offsetTop;
-
-// Add the sticky class to the header when you reach its scroll position. Remove "sticky" when you leave the scroll position
-function myFunction() {
   if (window.pageYOffset > sticky) {
     header.classList.add("sticky");
   } else {
     header.classList.remove("sticky");
   }
-}
+};
 
-function pConsole() {
-  let name = document.getElementById("name");
+var header = document.getElementById("navigation");
 
-  if (name.value !== "") {
-    console.log("Your name:" + name.value);
+var sticky = header.offsetTop;
+
+const form = document.getElementsByTagName("form")[0];
+
+const email = document.getElementById("email");
+const emailError = document.querySelector("#email + span.error");
+let name = document.getElementById("name");
+const nameError = document.querySelector("#name + span.name-error");
+
+const age = document.getElementById("age");
+const weight = document.getElementById("weight");
+const height = document.getElementById("height");
+const doesSports = document.getElementById("sport");
+
+name.addEventListener("input", function (event) {
+  if (!hasNumber(name.value) && name.value != "") {
+    nameError.textContent = "";
+    nameError.className = "name-error";
   } else {
-    alert("Enter your name");
+    nameError.className = "name-error-active";
+    nameError.textContent = "Name can not contain numbers";
   }
+});
 
-  let email = document.getElementById("email");
-  if (validateEmail(email)) {
-    console.log("correct email");
-  }
-
-  let age = document.getElementById("age");
-  if (validateAge(age.value)) {
-    console.log("Age: " + age.value);
-  }
-
-  let weight = document.getElementById("weight");
-  if (validateWeight(weight.value)) {
-    console.log("Your weight: " + weight.value + " kg");
-  }
-
-  let height = document.getElementById("height");
-
-  if (validateHeight(height.value)) {
-    console.log("Your height: " + height.value + " cm");
-  }
-
-  if (document.querySelector('input[name="gender"]:checked')) {
-    console.log(
-      "Gender: " + document.querySelector('input[name="gender"]:checked'.value)
-    );
+email.addEventListener("input", function (event) {
+  if (validateEmail(email.value)) {
+    console.log("ok");
+    emailError.textContent = "";
+    emailError.className = "error";
   } else {
-    alert("Choose your gender!");
+    emailError.className = "error-active";
+    emailError.textContent = "Incorrect or empty email";
   }
+});
 
-  // if (document.querySelector('input[name="activity"]:checked')) {
-  //   console.log("Activity: " + activity.value);
-  // } else {
-  //   alert("Choose activity!");
+form.addEventListener("submit", function (event) {
+  event.preventDefault;
+  // if (1 == 1) {
+  //   alert("hui");
+  //   event.pre ventDefault;
   // }
-
-  let doesSports = document.getElementById("sport");
-  if (doesSports.checked == true) {
-    console.log("Does sports");
-  } else {
-    console.log("Does not do sports");
-  }
-
-  let hasADog = document.getElementById("dog");
-  if (hasADog.checked == true) {
-    console.log("Has a dog");
-  } else {
-    console.log("Does not have a dog");
-  }
-}
+});
 
 function validateEmail(mail) {
-  if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(mail.value)) {
+  if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(mail)) {
     return true;
   }
-  alert("You have entered an invalid email address!");
   return false;
-}
-
-function validateWeight(weight) {
-  if (weight < 300 && weight > 30) {
-    return true;
-  } else {
-    alert("Your weight is strange");
-    return false;
-  }
-}
-
-function validateAge(age) {
-  if (age < 100 && age > 17) {
-    return true;
-  } else {
-    alert("You are too young or too old!");
-    return false;
-  }
-}
-
-function validateHeight(height) {
-  if (height < 250 && height > 100) {
-    return true;
-  } else {
-    alert("Invalid height");
-    return false;
-  }
 }
