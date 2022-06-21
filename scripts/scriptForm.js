@@ -22,7 +22,16 @@ const nameError = document.querySelector("#name + span.name-error");
 const age = document.getElementById("age");
 const weight = document.getElementById("weight");
 const height = document.getElementById("height");
-const doesSports = document.getElementById("sport");
+
+if (document.getElementById("male").checked) {
+  console.log("male");
+} else if (document.getElementById("female").checked) {
+  console.log("female");
+} else {
+  console.log("none");
+}
+
+// const doesSports = document.getElementById("sport");
 
 name.addEventListener("input", function (event) {
   if (!hasNumber(name.value) && name.value != "") {
@@ -30,7 +39,7 @@ name.addEventListener("input", function (event) {
     nameError.className = "name-error";
   } else {
     nameError.className = "name-error-active";
-    nameError.textContent = "Name can not contain numbers";
+    nameError.textContent = "Name can not contain numbers or be empty";
   }
 });
 
@@ -45,17 +54,24 @@ email.addEventListener("input", function (event) {
   }
 });
 
-form.addEventListener("submit", function (event) {
-  event.preventDefault;
-  // if (1 == 1) {
-  //   alert("hui");
-  //   event.pre ventDefault;
-  // }
-});
-
 function validateEmail(mail) {
   if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(mail)) {
     return true;
   }
   return false;
 }
+
+form.addEventListener("submit", function (event) {
+  if (
+    !validateEmail(email.value) ||
+    hasNumber(name.value) ||
+    !name.value ||
+    !age.value ||
+    !weight.value ||
+    !height.value ||
+    (!document.getElementById("male").checked &&
+      !document.getElementById("female").checked)
+  ) {
+    event.preventDefault();
+  }
+});

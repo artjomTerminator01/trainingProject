@@ -21,7 +21,12 @@
           Input your info so we can choose the best diet for you
         </p>
         <p class="text">A diet will be calculated based on your physiology</p>
-        <form id="main-form" action="result.html" method="GET">
+        <form
+          class="main-form"
+          id="main-form"
+          action="result.html"
+          method="GET"
+        >
           <div class="form-input">
             <label class="form-label" for="name">name</label>
             <input type="text" id="name" placeholder="your name" name="name" />
@@ -44,7 +49,7 @@
             <input
               type="number"
               id="age"
-              placeholder="your age"
+              placeholder="years"
               name="age"
               min="18"
               max="100"
@@ -56,7 +61,7 @@
             <input
               type="number"
               id="weight"
-              placeholder="your weight in kg"
+              placeholder="kg"
               name="weight"
               min="35"
               max="250"
@@ -68,7 +73,7 @@
             <input
               type="number"
               id="height"
-              placeholder="your height in cm"
+              placeholder="cm"
               name="height"
               min="100"
               max="250"
@@ -77,43 +82,139 @@
           </div>
           <div class="form-input">
             <label class="form-label" for="male">male</label>
-            <input type="radio" id="gender" name="gender" value="male" />
+            <input type="radio" id="male" name="gender" value="male" />
 
-            <label class="form-label" for="female">female</label>
-            <input type="radio" id="gender" name="gender" value="female" />
+            <label class="form-label" for=" female">female</label>
+            <input type="radio" id="female" name="gender" value="female" />
           </div>
 
           <div class="form-input">
-            <p class="activity-title">WEEK ACTIVE DAYS</p>
-            <label for="0-2">0-2</label>
-            <input type="radio" id="activity" name="active" value="0-2" />
+            <p class="activity-title">ACTIVITY LEVEL</p>
+            <label for="0-3">0-3</label>
+            <input type="radio" id="activity" name="active" value="0-3" />
 
-            <label for="3-5">3-5</label>
-            <input type="radio" id="activity" name="active" value="3-5" />
+            <label for="4-7">4-7</label>
+            <input type="radio" id="activity" name="active" value="4-7" />
 
-            <label for="6-7">6-7 </label>
-            <input type="radio" id="activity" name="active" value="6-7" />
+            <label for="8-10">8-10 </label>
+            <input type="radio" id="activity" name="active" value="8-10" />
           </div>
 
           <div class="form-input">
+            <p class="activity-title">ALLERGIES</p>
             <input
               type="checkbox"
-              id="sport"
-              name="doing sports"
-              value="sport"
+              id="lactose"
+              name="lactose"
+              value="lactose"
             />
-            <label class="form-label" for="sport"> I do sports</label>
+            <label class="form-label" for="lactose">lactose</label>
 
-            <input type="checkbox" id="dog" name="has a dog" value="dog" />
-            <label class="form-label" for="dog"> I have a dog</label>
+            <input type="checkbox" id="nuts" name="nuts" value="nuts" />
+            <label class="form-label" for="nuts">nuts</label>
+
+            <input type="checkbox" id="eggs" name="eggs" value="eggs" />
+            <label class="form-label" for="eggs">eggs</label>
+
+            <input type="checkbox" id="fish" name="fish" value="fish" />
+            <label class="form-label" for="fish">fish</label>
+
+            <input type="checkbox" id="gluten" name="gluten" value="gluten" />
+            <label class="form-label" for="gluten">gluten</label>
+
+            <input type="checkbox" id="soy" name="soy" value="soy" />
+            <label class="form-label" for="soy">soy</label>
+
+            <p class="activity-title">PREFERENCES</p>
+            <input
+              type="checkbox"
+              id="pref-pasta"
+              name="pref-pasta"
+              value="pasta"
+            />
+            <label class="form-label" for="pref-pasta">pasta </label>
+
+            <input
+              type="checkbox"
+              id="pref-chicken"
+              name="pref-chicken"
+              value="chicken"
+            />
+            <label class="form-label" for="pref-chicken">chicken</label>
+
+            <input
+              type="checkbox"
+              id="pref-eggs"
+              name="pref-eggs"
+              value="eggs"
+            />
+            <label class="form-label" for="pref-eggs">eggs</label>
+
+            <input
+              type="checkbox"
+              id="pref-fish"
+              name="pref-fish"
+              value="fish"
+            />
+            <label class="form-label" for="fish">fish</label>
+
+            <input
+              type="checkbox"
+              id="pref-rice"
+              name="pref-rice"
+              value="rice"
+            />
+            <label class="form-label" for="pref-rice">rice</label>
+
+            <input type="checkbox" id="pref-soy" name="pref-soy" value="soy" />
+            <label class="form-label" for="pref-soy">soy</label>
+
+            <input
+              type="checkbox"
+              id="pref-banana"
+              name="pref-banana"
+              value="banana"
+            />
+            <label class="form-label" for="pref-banana">banana</label>
+
+            <input
+              type="checkbox"
+              id="pref-tomato"
+              name="pref-tomato"
+              value="tomato"
+            />
+            <label class="form-label" for="pref-tomato">tomato</label>
+
+            <input
+              type="checkbox"
+              id="pref-potato"
+              name="pref-potato"
+              value="potato"
+            />
+            <label class="form-label" for="pref-potato">potato</label>
           </div>
           <button class="submit-button" type="submit">Submit</button>
         </form>
-      </div>
 
-      <img
-        src="https://www.biography.com/.image/ar_1:1%2Cc_fill%2Ccs_srgb%2Cfl_progressive%2Cq_auto:good%2Cw_1200/MTE4MDAzNDEwNzg5ODI4MTEw/barack-obama-12782369-1-402.jpg"
-      />
+        <div class="description">
+          <p class="header1">HOW THESE CALORIES ARE CALCULATED?</p>
+          <p class="text">Mifflin-St Jeor Equation:</p>
+          <p class="text">For men:</p>
+          <p class="text">
+            (10 * weight(kg) + 6.25 * height(cm) - 5 * age + 5) multiplier
+          </p>
+          <p class="text">For women:</p>
+          <p class="text">
+            (10 * weight(kg) + 6.25 * height(cm) - 5 * age - 161) multiplier
+          </p>
+          <p class="text">0-3 activity level - 1 multiplier</p>
+          <p class="text">4-7 activity level - 1.15 multiplier</p>
+          <p class="text">8-10 activity level - 1.3 multiplier</p>
+          <p class="text">Carbs: calorie-intake * 0.5 / 4</p>
+          <p class="text">Proteins: calorie-intake * 0.3 / 4</p>
+          <p class="text">Fats: calorie-intake * 0.2 / 9</p>
+        </div>
+      </div>
     </div>
 
     <script type="module" src="../scripts/scriptForm.js"></script>

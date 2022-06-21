@@ -8,6 +8,11 @@ html {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+.container-index {
+  max-width: 1150px;
+  margin: 0 auto;
+}
+
 
 h1 {
   font-size: 300%;
@@ -73,9 +78,9 @@ p.indent {
 
 
 .users-box {
-  width: 1500px;
-  height: 300px;
   margin: 0 auto;
+  text-align: center;
+
 }
 
 .price-box {
@@ -105,8 +110,14 @@ p.indent {
 .obama {
   width: 200px;
   height: 200px;
-  border-radius: 50%;
+  border-radius: 50%; 
   display: inline-block;
+}
+
+.user-icon{
+  width: 33%;
+  text-align: "center";
+  display: inline-block; 
 }
 
 .user-text{
@@ -157,6 +168,21 @@ p.indent {
   font-size: 24px;
 }
 
-.pdf-icon:hover{
+.github{
+  text-align: center;
+}
+
+.git-icon{
+  margin-bottom: 8px;
+}
+
+.pdf-icon:hover, .git-icon:hover{
   opacity: 0.6;
 }
+
+.footer-text{
+  font-family: verdana;
+  font-weight: bold;
+}
+
+

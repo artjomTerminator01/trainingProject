@@ -1,5 +1,118 @@
+import { generateMealPlan } from "./mealPlan-generator.js";
+
 window.addEventListener("load", () => {
   const params = new URL(document.location).searchParams;
   const name = params.get("name");
+  const age = params.get("age");
+  const weight = params.get("weight");
+  const height = params.get("height");
+  const gender = params.get("gender");
+  const activity = params.get("active");
+
+  const lactose = params.get("lactose");
+  const nuts = params.get("nuts");
+  const eggs = params.get("eggs");
+  const gluten = params.get("gluten");
+  const soy = params.get("soy");
+  const fish = params.get("fish");
+
+  const prefPasta = params.get("pref-pasta");
+  const prefChicken = params.get("pref-chicken");
+  const prefEggs = params.get("pref-eggs");
+  const prefFish = params.get("pref-fish");
+  const prefRice = params.get("pref-rice");
+  const prefSoy = params.get("pref-soy");
+  const prefBanana = params.get("pref-banana");
+  const prefTomato = params.get("pref-tomato");
+  const prefPotato = params.get("pref-potato");
+
+  const calorieIntake = calculateCalories(
+    age,
+    weight,
+    height,
+    gender,
+    activity
+  );
+  const carbs = ((calorieIntake * 0.5) / 4).toFixed(2);
+  const protein = ((calorieIntake * 0.3) / 4).toFixed(2);
+  const fats = ((calorieIntake * 0.2) / 9).toFixed(2);
+
+  let allergies = [lactose, nuts, eggs, gluten, soy, fish];
+  let preferences = [
+    prefPasta,
+    prefChicken,
+    prefEggs,
+    prefFish,
+    prefRice,
+    prefSoy,
+    prefBanana,
+    prefTomato,
+    prefPotato,
+  ];
+
+  const dayMealPlan = generateMealPlan(
+    calorieIntake,
+    carbs,
+    protein,
+    fats,
+    allergies,
+    preferences
+  );
+
+  console.log(dayMealPlan);
+
+  document.getElementById("calories").innerHTML = calorieIntake.toFixed(2);
+  document.getElementById("carbs").innerHTML = carbs;
+  document.getElementById("proteins").innerHTML = protein;
+  document.getElementById("fats").innerHTML = fats;
+  document.getElementById("total").innerHTML = dayMealPlan.dayCalories;
+
   document.getElementById("result-name").innerHTML = name;
+
+  function generateTableHead(table, dayMealPlan) {
+    for (let element of dayMealPlan.breakfastList) {
+      let row = table.insertRow();
+      let cell = row.insertCell();
+      let text = document.createTextNode("BREAKFAST");
+      cell.appendChild(text);
+      for (let key in element) {
+        if (key != "score") {
+          let cell = row.insertCell();
+          let text = document.createTextNode(element[key]);
+          cell.appendChild(text);
+        }
+      }
+    }
+    for (let element of dayMealPlan.lunchesAndDinnersList) {
+      let row = table.insertRow();
+      let cell = row.insertCell();
+      let text = document.createTextNode("LUNCH OR DINNER");
+      cell.appendChild(text);
+      for (let key in element) {
+        if (key != "score") {
+          let cell = row.insertCell();
+          let text = document.createTextNode(element[key]);
+          cell.appendChild(text);
+        }
+      }
+    }
+  }
+
+  let table = document.querySelector("table");
+  generateTableHead(table, dayMealPlan);
 });
+
+function calculateCalories(age, weight, height, gender, activity) {
+  let activityMultiplier = 1;
+  console.log("ACTIVITY: " + activity);
+  if (activity == "8-10") {
+    activityMultiplier = 1.3;
+  } else if (activity == "4-7") {
+    activityMultiplier = 1.15;
+  }
+  if (gender == "male") {
+    return (10 * weight + 6.25 * height - 5 * age + 5) * activityMultiplier;
+  } else if (gender == "female") {
+    return (10 * weight + 6.25 * height - 5 * age - 161) * activityMultiplier;
+  }
+}

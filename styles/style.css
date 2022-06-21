@@ -7,6 +7,7 @@ body {
 .container {
   max-width: 1150px;
   margin: 0 auto;
+  text-align: center;
 }
 
 h1 {
@@ -28,4 +29,18 @@ input[type='text'] {
   margin: 8px 0;
   box-sizing: border-box;
   text-align: center;
+}
+
+.footer{
+  text-align: center;
+  background-color: rgb(47, 90, 54);
+  color: white;
+  
+}
+
+.footer-text{
+  display: inline-block;
+  margin-left: 16px;
+  font-family: Verdana;
+  height: 32px;
 }
