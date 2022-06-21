@@ -46,6 +46,8 @@
 
   .submit-button:hover{
     background-color: rgb(47, 104, 57);
+    cursor: pointer;
+
   }
   
   .submit-button:active{
@@ -54,6 +56,7 @@
   
   .form:hover{
     background-color: rgb(47, 104, 57);
+    cursor: pointer;
   }
   
   .form:active{

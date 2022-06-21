@@ -70,6 +70,7 @@ p.indent {
 
 .form:hover{
   background-color: rgb(47, 104, 57);
+  cursor: pointer;
 }
 
 .form:active{
@@ -78,9 +79,14 @@ p.indent {
 
 
 .users-box {
-  margin: 0 auto;
   text-align: center;
+  display: flex; 
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap
 
+
+  
 }
 
 .price-box {
@@ -111,17 +117,12 @@ p.indent {
   width: 200px;
   height: 200px;
   border-radius: 50%; 
-  display: inline-block;
+  display: flex;
 }
 
-.user-icon{
-  width: 33%;
-  text-align: "center";
-  display: inline-block; 
-}
 
 .user-text{
-  display: inline-block;
+  display: flex;
   width: 200px;
   margin-right: 16px;
 
@@ -181,6 +182,11 @@ p.indent {
 }
 
 .footer-text{
+  font-family: verdana;
+  font-weight: bold;
+}
+
+.text1{
   font-family: verdana;
   font-weight: bold;
 }

@@ -50,7 +50,7 @@ window.addEventListener("load", () => {
     prefPotato,
   ];
 
-  const dayMealPlan = generateMealPlan(
+  const plan = generateMealPlan(
     calorieIntake,
     carbs,
     protein,
@@ -59,6 +59,10 @@ window.addEventListener("load", () => {
     preferences
   );
 
+  const dayMealPlan = plan[0];
+  const weekMealPlan = plan[1];
+
+  console.log("hui");
   console.log(dayMealPlan);
 
   document.getElementById("calories").innerHTML = calorieIntake.toFixed(2);
@@ -66,6 +70,14 @@ window.addEventListener("load", () => {
   document.getElementById("proteins").innerHTML = protein;
   document.getElementById("fats").innerHTML = fats;
   document.getElementById("total").innerHTML = dayMealPlan.dayCalories;
+
+  document.getElementById("total-mon").innerHTML = weekMealPlan[0].dayCalories;
+  document.getElementById("total-tue").innerHTML = weekMealPlan[1].dayCalories;
+  document.getElementById("total-wed").innerHTML = weekMealPlan[2].dayCalories;
+  document.getElementById("total-thu").innerHTML = weekMealPlan[3].dayCalories;
+  document.getElementById("total-fri").innerHTML = weekMealPlan[4].dayCalories;
+  document.getElementById("total-sat").innerHTML = weekMealPlan[5].dayCalories;
+  document.getElementById("total-sun").innerHTML = weekMealPlan[6].dayCalories;
 
   document.getElementById("result-name").innerHTML = name;
 
@@ -98,8 +110,50 @@ window.addEventListener("load", () => {
     }
   }
 
-  let table = document.querySelector("table");
+  function generateTableHeadWeekPlan(table, weekMealPlan) {
+    for (let i = 0; i < weekMealPlan.length; i++) {
+      for (let element of weekMealPlan[i].breakfastList) {
+        let row = table[i].insertRow();
+        let cell = row.insertCell();
+        let text = document.createTextNode("BREAKFAST");
+        cell.appendChild(text);
+        for (let key in element) {
+          if (key != "score") {
+            let cell = row.insertCell();
+            let text = document.createTextNode(element[key]);
+            cell.appendChild(text);
+          }
+        }
+      }
+      for (let element of weekMealPlan[i].lunchesAndDinnersList) {
+        let row = table[i].insertRow();
+        let cell = row.insertCell();
+        let text = document.createTextNode("LUNCH OR DINNER");
+        cell.appendChild(text);
+        for (let key in element) {
+          if (key != "score") {
+            let cell = row.insertCell();
+            let text = document.createTextNode(element[key]);
+            cell.appendChild(text);
+          }
+        }
+      }
+    }
+  }
+
+  let table = document.getElementById("day-meal");
   generateTableHead(table, dayMealPlan);
+  const weekTableList = [
+    document.getElementById("monday"),
+    document.getElementById("tuesday"),
+    document.getElementById("wednesday"),
+    document.getElementById("thursday"),
+    document.getElementById("friday"),
+    document.getElementById("saturday"),
+    document.getElementById("sunday"),
+  ];
+
+  generateTableHeadWeekPlan(weekTableList, weekMealPlan);
 });
 
 function calculateCalories(age, weight, height, gender, activity) {

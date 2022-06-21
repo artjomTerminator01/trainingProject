@@ -41,6 +41,17 @@ export function generateMealPlan(
 ) {
   let meals = {
     breakfasts: {
+      apple: {
+        name: "an apple",
+        kcal: 120,
+        protein: 1,
+        fat: 1,
+        carbs: 23,
+        ingredients: ["apple"],
+        allergenes: [],
+        score: 0,
+      },
+
       scrambledEggs: {
         name: "scrambled eggs",
         kcal: 350,
@@ -96,7 +107,7 @@ export function generateMealPlan(
       },
       niceOne: {
         name: "nice one",
-        kcal: 251,
+        kcal: 451,
         protein: 15,
         fat: 12,
         carbs: 18,
@@ -106,7 +117,7 @@ export function generateMealPlan(
       },
       blueberryPorridge: {
         name: "blueberry porridge",
-        kcal: 214,
+        kcal: 314,
         protein: 13,
         fat: 4,
         carbs: 35,
@@ -138,7 +149,7 @@ export function generateMealPlan(
       },
       someRandomShit: {
         name: "random shit",
-        kcal: 512,
+        kcal: 612,
         protein: 45,
         fat: 23,
         carbs: 35,
@@ -148,7 +159,7 @@ export function generateMealPlan(
       },
       teriyaki: {
         name: "teriyaki",
-        kcal: 372,
+        kcal: 672,
         protein: 44,
         fat: 10,
         carbs: 24,
@@ -158,7 +169,7 @@ export function generateMealPlan(
       },
       kedgeree: {
         name: "kedgeree",
-        kcal: 418,
+        kcal: 518,
         protein: 36,
         fat: 10,
         carbs: 45,
@@ -169,7 +180,7 @@ export function generateMealPlan(
 
       fishAndRice: {
         name: "fish and rice",
-        kcal: 578,
+        kcal: 778,
         protein: 45,
         fat: 15,
         carbs: 45,
@@ -180,11 +191,22 @@ export function generateMealPlan(
 
       leanChicken: {
         name: "lean chicken",
-        kcal: 250,
+        kcal: 350,
         protein: 50,
         fat: 3,
         carbs: 0,
         ingredients: ["chicken"],
+        allergenes: [],
+        score: 0,
+      },
+
+      chickenSalad: {
+        name: "chicken salad",
+        kcal: 250,
+        protein: 25,
+        fat: 3,
+        carbs: 5,
+        ingredients: ["chicken", "tomato", "olive oil"],
         allergenes: [],
         score: 0,
       },
@@ -197,26 +219,58 @@ export function generateMealPlan(
       meals[times][meal].score +=
         checkAllergies(allergies, meals[times][meal].allergenes) * -10 +
         checkPreferences(preferences, meals[times][meal].ingredients) * 5;
-      // console.log(meals[times][meal].name);
-      // console.log(meals[times][meal].score);
     }
-
-    //console.log(sortLunchAndDinners(meals));
   }
 
   let mealplan = new mealPlan(dayCalories);
+  let mealplan2 = new mealPlan(dayCalories);
+  let mealplan3 = new mealPlan(dayCalories);
+  let mealplan4 = new mealPlan(dayCalories);
+  let mealplan5 = new mealPlan(dayCalories);
+  let mealplan6 = new mealPlan(dayCalories);
+  let mealplan7 = new mealPlan(dayCalories);
+  let weekPlan = [
+    mealplan2,
+    mealplan3,
+    mealplan4,
+    mealplan,
+    mealplan5,
+    mealplan6,
+    mealplan7,
+  ];
+
+  const breakfasts = sortBreakfast(meals);
+  const lunchesAndDinners = sortLunchAndDinners(meals);
+
   dayMealPlan();
+  weekMealPlan();
 
   function dayMealPlan() {
-    const breakfasts = sortBreakfast(meals);
-    const lunchesAndDinners = sortLunchAndDinners(meals);
     mealplan.addBreakfast(breakfasts[0]);
     for (let i = 0; i < lunchesAndDinners.length; i++) {
       mealplan.addLunchAndDinner(lunchesAndDinners[i]);
     }
   }
 
-  return mealplan;
+  function weekMealPlan() {
+    for (let i = 0; i < weekPlan.length; i++) {
+      weekPlan[i].addBreakfast(
+        breakfasts[Math.floor(Math.random() * (breakfasts.length - 1))]
+      );
+
+      for (let j = 0; j < lunchesAndDinners.length; j++) {
+        weekPlan[i].addLunchAndDinner(
+          lunchesAndDinners[
+            Math.floor(Math.random() * (lunchesAndDinners.length - 1))
+          ]
+        );
+      }
+    }
+  }
+
+  console.log(weekPlan);
+
+  return [mealplan, weekPlan];
 }
 
 function checkAllergies(allAllergies, mealAllergies) {
@@ -244,7 +298,9 @@ function checkPreferences(allPreferences, mealIngredients) {
 function sortBreakfast(meals) {
   const sorted = [];
   for (const breakfastMeal in meals.breakfasts) {
-    sorted.push(meals.breakfasts[breakfastMeal]);
+    if (meals.breakfasts[breakfastMeal].score >= 0) {
+      sorted.push(meals.breakfasts[breakfastMeal]);
+    }
   }
   sorted.sort((a, b) =>
     a.score < b.score
@@ -262,7 +318,9 @@ function sortBreakfast(meals) {
 function sortLunchAndDinners(meals) {
   const sorted = [];
   for (const lunchOrDinner in meals.lunchesAndDinners) {
-    sorted.push(meals.lunchesAndDinners[lunchOrDinner]);
+    if (meals.lunchesAndDinners[lunchOrDinner].score >= 0) {
+      sorted.push(meals.lunchesAndDinners[lunchOrDinner]);
+    }
   }
   sorted.sort((a, b) =>
     a.score < b.score

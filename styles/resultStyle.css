@@ -20,7 +20,8 @@
   font-size: 32px;
   font-weight: bold;
   border: none;
-  padding: 12px 12px;
+  padding: 12px 24px;
+  padding-bottom: 24px;
   height: 100%;
 
 }
@@ -57,20 +58,40 @@
   font-size: 16px;
 }
 
+.text4{
+  color: rgb(142, 168, 147);
+  font-family: verdana;
+  font-weight: bold;
+  font-size: 24px;
+}
+
 .res{
   color: rgb(47, 104, 57);
   font-family: verdana;
   font-weight: bold;
   font-size: 24px;
 }
+table{
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  border: 1px solid;
+  text-align: center;
+  color: white;
+}
 
 .day-meal {
-  text-align: center;
-  margin: 0 auto;
-  border: 1px solid;
   background-color: rgb(119, 156, 126);
-  color: white;
   border-radius: 6px;
+  margin-bottom: 128px;
+
+
+}
+
+.week-meal {
+  background-color: rgb(144, 156, 119);
+  border-radius: 6px;
+
 }
 
 th, td {
@@ -79,6 +100,5 @@ th, td {
   font-weight: bold;
   font-family: verdana;
   background-color: rgb(67, 105, 74);
-
 
 }
