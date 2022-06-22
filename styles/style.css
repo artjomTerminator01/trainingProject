@@ -2,6 +2,7 @@
 
 body {
   background-color: white;
+  margin: auto 0;
 }
 
 .container {
@@ -35,6 +36,7 @@ input[type='text'] {
   text-align: center;
   background-color: rgb(47, 90, 54);
   color: white;
+  margin-top: 64px;
   
 }
 
@@ -44,3 +46,21 @@ input[type='text'] {
   font-family: Verdana;
   height: 32px;
 }
+
+.github{
+  text-align: center;
+}
+
+.git-icon{
+  margin-bottom: 8px;
+}
+
+.git-icon:hover{
+  opacity: 0.6;
+}
+
+.footer-text{
+  font-family: verdana;
+  font-weight: bold;
+}
+

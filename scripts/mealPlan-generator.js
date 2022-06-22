@@ -10,7 +10,7 @@ class mealPlan {
   }
 
   addBreakfast(breakfast) {
-    if (this.dayCalories + breakfast.kcal <= this.calorieLimit) {
+    if (this.dayCalories + breakfast.kcal <= this.calorieLimit + 50) {
       this.breakfastList.push(breakfast);
       this.dayCalories += breakfast.kcal;
       this.carbs += breakfast.carbs;
@@ -21,7 +21,7 @@ class mealPlan {
 
   addLunchAndDinner(dinnerOrLunch) {
     console.log(dinnerOrLunch.kcal);
-    if (this.dayCalories + dinnerOrLunch.kcal <= this.calorieLimit) {
+    if (this.dayCalories + dinnerOrLunch.kcal <= this.calorieLimit + 50) {
       this.lunchesAndDinnersList.push(dinnerOrLunch);
       this.dayCalories += dinnerOrLunch.kcal;
       this.carbs += dinnerOrLunch.carbs;

@@ -84,9 +84,6 @@ p.indent {
   flex-direction: row;
   justify-content: space-around;
   flex-wrap: wrap
-
-
-  
 }
 
 .price-box {
@@ -169,22 +166,13 @@ p.indent {
   font-size: 24px;
 }
 
-.github{
-  text-align: center;
-}
 
-.git-icon{
-  margin-bottom: 8px;
-}
 
-.pdf-icon:hover, .git-icon:hover{
+.pdf-icon:hover{
   opacity: 0.6;
 }
 
-.footer-text{
-  font-family: verdana;
-  font-weight: bold;
-}
+
 
 .text1{
   font-family: verdana;
