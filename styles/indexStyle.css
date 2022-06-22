@@ -1,22 +1,8 @@
 /* LEHE SPETSIIFILISED (index.css / form.css...) */
 
-body,
-html {
-  height: 100%;
-  margin: 0;
-  background-color: white;
-  font-family: Arial, Helvetica, sans-serif;
-}
-
 .container-index {
   max-width: 1150px;
   margin: 0 auto;
-}
-
-
-h1 {
-  font-size: 300%;
-  text-align: center;
 }
 
 p.indent {
@@ -29,32 +15,26 @@ p.indent {
 }
 
 .hero-image {
+  display: block;
+  padding-top: 48px;
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
     url('https://preview.redd.it/99400v5s58p81.jpg?auto=webp&s=4ab3ffc9e319381c417ffaa53bce9acfa6437478');
-  height: 55%;
+  height: 800px;
   background-position: top;
   background-repeat: no-repeat;
   background-size: cover;
-  position: relative;
 }
 
 .hero-text {
-  font-size: 300%;
   text-align: center;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   color: white;
 }
 
-
-.button-container{
+.button-container {
   margin-top: 36px;
   margin-bottom: 24px;
   text-align: center;
 }
-
 
 .form {
   background-color: rgb(47, 90, 54);
@@ -68,91 +48,83 @@ p.indent {
   border: none;
 }
 
-.form:hover{
+.form:hover {
   background-color: rgb(47, 104, 57);
   cursor: pointer;
 }
 
-.form:active{
+.form:active {
   background-color: black;
 }
 
-
 .users-box {
   text-align: center;
-  display: flex; 
+  display: flex;
   flex-direction: row;
   justify-content: space-around;
-  flex-wrap: wrap
+  flex-wrap: wrap;
 }
 
 .price-box {
   display: inline-block;
   vertical-align: top;
-
 }
 
-.sub-box{
+.sub-box {
   display: inline-block;
   vertical-align: top;
   margin-left: 96px;
   text-align: center;
 }
 
-.price-contains{
+.price-contains {
   display: inline-block;
   vertical-align: top;
 }
 
-.description{
+.description {
   font-size: 24px;
   color: rgb(47, 90, 54);
-
 }
 
 .obama {
   width: 200px;
   height: 200px;
-  border-radius: 50%; 
+  border-radius: 50%;
   display: flex;
 }
 
-
-.user-text{
+.user-text {
   display: flex;
   width: 200px;
   margin-right: 16px;
-
 }
-
 
 .subscription {
   font-family: verdana;
   font-size: 48px;
-  display:inline-block;
+  display: inline-block;
 }
 
 .price {
   color: rgb(47, 90, 54);
   font-family: verdana;
   font-size: 64px;
-  display:inline-block;
+  display: inline-block;
   font-weight: bold;
-
 }
 
-.pdf-info{
+.pdf-info {
   margin-top: 32px;
   text-align: center;
 }
 
-.icon{
+.icon {
   display: inline-block;
   vertical-align: top;
-
 }
 
-.pdf-desc{
+.pdf-desc {
   display: inline-block;
   vertical-align: top;
   text-align: center;
@@ -160,23 +132,17 @@ p.indent {
   margin-left: 64px;
 }
 
-.pdf-desc-title{
+.pdf-desc-title {
   color: rgb(47, 90, 54);
   font-family: verdana;
   font-size: 24px;
 }
 
-
-
-.pdf-icon:hover{
+.pdf-icon:hover {
   opacity: 0.6;
 }
 
-
-
-.text1{
+.text1 {
   font-family: verdana;
   font-weight: bold;
 }
-
-
