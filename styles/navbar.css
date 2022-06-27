@@ -1,3 +1,40 @@
 .header {
   position: fixed;
 }
+
+
+
+.topnav {
+  overflow: hidden;
+  background-color: rgb(47, 90, 54);
+  text-align: center;
+  background-position: top;
+  width: 100%;
+  height: 64px;
+}
+
+.topnav a {
+  background-color: rgb(47, 90, 54);
+  color: white;
+  font-family: verdana;
+  text-align: center;
+  text-decoration: none;
+  font-size: 32px;
+  font-weight: bold;
+  border: none;
+  padding: 12px 24px;
+  padding-bottom: 24px;
+  height: 100%;
+
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  background-color: rgb(47, 104, 57);
+
+}
+
+.topnav a.active {
+  background-color: #04AA6D;
+  color: white;
+}

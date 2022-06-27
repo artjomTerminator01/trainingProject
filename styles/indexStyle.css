@@ -1,52 +1,35 @@
-/* LEHE SPETSIIFILISED (index.css / form.css...) */
-
-body,
-html {
-  height: 100%;
-  margin: 0;
-  background-color: white;
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-.container-index {
-  max-width: 1150px;
-  margin: 0 auto;
-}
-
-h1 {
-  font-size: 300%;
-  text-align: center;
-}
 
 p.indent {
   font-size: 150%;
   text-align: center;
-  width: 800px;
-  height: 300px;
+  height: 200px;
   margin: 0 auto;
   margin-top: 12px;
 }
 
 .hero-image {
+  display: flex;
+  flex-direction: column;
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
     url('https://preview.redd.it/99400v5s58p81.jpg?auto=webp&s=4ab3ffc9e319381c417ffaa53bce9acfa6437478');
   height: 55%;
   background-position: top;
   background-repeat: no-repeat;
   background-size: cover;
-  position: relative;
+
 }
 
 .hero-text {
-  font-size: 300%;
+  font-size: 2vw;
   text-align: center;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  max-width: 400px;
-  margin: 0 auto;
   color: white;
+  margin-top: 128px;
+
+}
+
+.text1 {
+  font-family: verdana;
+  font-weight: bold;
 }
 
 .button-container {
@@ -161,7 +144,4 @@ p.indent {
   opacity: 0.6;
 }
 
-.text1 {
-  font-family: verdana;
-  font-weight: bold;
-}
+

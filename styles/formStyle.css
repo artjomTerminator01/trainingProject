@@ -1,100 +1,71 @@
-.navigation{
-    background-color: rgb(47, 90, 54);
-    background-position: top;
-    background-size: cover;
-    margin: 0 auto;
-    height: 64px;
-    text-align: center;
-    top: 0;
-    width: 100%
+
+.submit-button{
+  background-color: rgb(47, 90, 54);
+  color: white;
+  font-family: verdana;
+  text-align: center;
+  text-decoration: none;
+  font-size: 32px;
+  font-weight: 200;
+  border: none;
+  padding: 8px 8px;
+  border-radius: 12px;
+  margin-top: 24px;
+  margin-bottom: 24px;
+  width: 50%;
 }
 
-.sticky {
-    position: fixed;
-    top: 0;
-    width: 100%
-  }
+.submit-button:hover{
+  background-color: rgb(47, 104, 57);
+  cursor: pointer;
 
-  .form {
-    background-color: rgb(47, 90, 54);
-    color: white;
-    font-family: verdana;
-    text-align: center;
-    text-decoration: none;
-    font-size: 32px;
-    font-weight: bold;
-    border: none;
-    padding: 12px 12px;
-  }
+}
 
+.submit-button:active{
+  background-color: black;
+}
 
-  .submit-button{
-    background-color: rgb(47, 90, 54);
-    color: white;
-    font-family: verdana;
-    text-align: center;
-    text-decoration: none;
-    font-size: 32px;
-    font-weight: 200;
-    border: none;
-    padding: 8px 8px;
-    border-radius: 12px;
-    margin-top: 24px;
-    margin-bottom: 24px;
-    width: 50%;
-  }
+.form:hover{
+  background-color: rgb(47, 104, 57);
+  cursor: pointer;
+}
 
-  .submit-button:hover{
-    background-color: rgb(47, 104, 57);
-    cursor: pointer;
-
-  }
-  
-  .submit-button:active{
-    background-color: black;
-  }
-  
-  .form:hover{
-    background-color: rgb(47, 104, 57);
-    cursor: pointer;
-  }
-  
-  .form:active{
-    background-color: black;
-  }
+.form:active{
+  background-color: black;
+}
 
 
-  .form-input{
-    margin-top: 12px;
-    display: block;
-    text-align: center;
+.form-input{
+  margin-top: 12px;
+  display: block;
+  text-align: center;
 
-  }
+}
 
-  .main-form{
-    width: 50%;
-    margin: 0 auto;
-    float:left;
-  }
+.main-form{
+  width: 50%;
+  margin: 0 auto;
+  float:left;
+}
 
-  .description{
-    margin-top: 64px;
-    display: inline-block;
-  }
+.description{
+  margin-top: 64px;
+  display: inline-block;
+}
 
 
-  .form-label, .activity-title, .header1{
-    color: rgb(47, 104, 57);
-    font-family: verdana;
-    font-weight: bold;
-  }
+.form-label, .activity-title, .header1{
+  color: rgb(47, 104, 57);
+  font-family: verdana;
+  font-weight: bold;
+}
 
-  .text{
-    color: rgb(93, 107, 96);
-    font-family: verdana;
-    font-weight: bold;
-    font-size: 14px;
-  }
+.text{
+  color: rgb(93, 107, 96);
+  font-family: verdana;
+  font-weight: bold;
+  font-size: 14px;
+}
 
 .error-active, .name-error-active {
   padding: 0.3em;
@@ -109,13 +80,10 @@
   display: block;
 }
 
-footer {
-  display: block;
-}
 
 
 
 
 
 
-  
+
