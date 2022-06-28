@@ -7,6 +7,7 @@ class MealPlan {
     this.fats = 0;
     this.breakfastList = [];
     this.lunchesAndDinnersList = [];
+    this.suitableBreakfasts = [];
   }
 
   addBreakfast(breakfast) {
@@ -29,6 +30,9 @@ class MealPlan {
       this.fats += dinnerOrLunch.fat;
     }
   }
+
+  // teed tööd...
+
 }
 
 export function generateMealPlan(dayCalories, allergies, preferences) {
@@ -84,6 +88,7 @@ export function generateMealPlan(dayCalories, allergies, preferences) {
 
 function checkAllergies(allAllergies, mealAllergies) {
   let counter = 0;
+
   for (let i = 0; i < mealAllergies.length; i++) {
     const al = mealAllergies[i];
     if (allAllergies.includes(al)) {
@@ -91,6 +96,9 @@ function checkAllergies(allAllergies, mealAllergies) {
     }
   }
   return counter;
+
+  // https://stackoverflow.com/questions/37896484/multiple-conditions-for-javascript-includes-method
+  // return mealAllergies.some(blabla).length
 }
 
 function checkPreferences(allPreferences, mealIngredients) {
@@ -106,10 +114,15 @@ function checkPreferences(allPreferences, mealIngredients) {
 
 function sortMeals(meals, mealType) {
   const sorted = [];
-  let mealsToSort = meals.lunchesAndDinners;
+
+  let mealsToSort;
   if (mealType == "breakfast") {
     mealsToSort = meals.breakfasts;
+  } else {
+    mealsToSort = meals.lunchesAndDinners;
   }
+
+  // meals = meals.filter(meal => meal.rank >= 0)
   for (const meal in mealsToSort) {
     if (mealsToSort[meal].score >= 0) {
       sorted.push(mealsToSort[meal]);
@@ -314,3 +327,19 @@ let meals = {
     },
   },
 };
+
+// funktsioonid ja muutujad õigesse järjekorda
+// 1. võta hommikusöögid ja õhtusöögid, eemalda allergiatega toidud
+// 2. lisa igale allesjäänud toidule rank
+// 3. sorti breakfastid ja lunches/dinners
+// 4. .innerHTML "best matching meal" vastavasse html sektsiooni (breakfasti ja lunches/dinneri esimene array liige (või viimane kui on asc order))
+// 5. loo utility function mis annab random numbri 0 ja array len vahel
+// 6. tee for loop nädalapäevade arvule ja injecti random hommikusöögid ja lõuna/õhtusöögid
+
+// 
+// 
+// 
+
+1. klassis on funktsioon getUserAllergies
+2. kasutage seda funktsiooni, et kuvada useri allergied resultsis
+3. kasutage seda funktsiooni, et eemdalda allergitega toidud

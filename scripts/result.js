@@ -9,6 +9,8 @@ window.addEventListener("load", () => {
   const gender = params.get("gender");
   const activity = params.get("active");
 
+  // ?allergies['allergie']=chad
+
   const lactose = params.get("lactose");
   const nuts = params.get("nuts");
   const eggs = params.get("eggs");
