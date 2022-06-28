@@ -93,6 +93,8 @@ window.addEventListener("load", () => {
     document.getElementById("sunday"),
   ];
 
+  //  const daysHTMLCollection = document.getElementsByClassName('day');
+
   generateTableHeadWeekPlan(dayTable, weekMealPlan, "breakfast");
 
   generateTableHeadWeekPlan(weekTableList, weekMealPlan, "lunch");
