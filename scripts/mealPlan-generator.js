@@ -32,7 +32,6 @@ class MealPlan {
   }
 
   // teed tööd...
-
 }
 
 export function generateMealPlan(dayCalories, allergies, preferences) {
@@ -336,10 +335,10 @@ let meals = {
 // 5. loo utility function mis annab random numbri 0 ja array len vahel
 // 6. tee for loop nädalapäevade arvule ja injecti random hommikusöögid ja lõuna/õhtusöögid
 
-// 
-// 
-// 
+//
+//
+//
 
-1. klassis on funktsioon getUserAllergies
-2. kasutage seda funktsiooni, et kuvada useri allergied resultsis
-3. kasutage seda funktsiooni, et eemdalda allergitega toidud
+// 1. klassis on funktsioon getUserAllergies
+// 2. kasutage seda funktsiooni, et kuvada useri allergied resultsis
+// 3. kasutage seda funktsiooni, et eemdalda allergitega toidud
