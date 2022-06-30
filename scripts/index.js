@@ -1,4 +1,3 @@
-const exp = require("constants");
 const express = require("express");
 const path = require("path");
 const app = express();
@@ -7,14 +6,22 @@ const port = 3000;
 app.set("view engine", "hbs");
 app.set("views", path.join(__dirname, "../views"));
 
-app.get("/", function (req, res) {
-  res.sendFile(path.join(__dirname, "../views/index.html"));
+app.use(express.static(path.join(__dirname, "../public")));
+app.use(express.json());
+
+app.get("/", (req, res) => {
+  res.render("index", {});
 });
-app.get("/form.html", function (req, res) {
-  res.sendFile(path.join(__dirname, "../views/form.html"));
+
+app.get("/index.hbs", (req, res) => {
+  res.render("index", {});
 });
-app.get("/result.html", function (req, res) {
-  res.sendFile(path.join(__dirname, "../views/result.html"));
+
+app.get("/form.hbs", (req, res) => {
+  res.render("form", {});
+});
+app.get("/result.hbs", (req, res) => {
+  res.render("result", {});
 });
 
 app.listen(port, () => {

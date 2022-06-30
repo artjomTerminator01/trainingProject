@@ -2,7 +2,12 @@
     text-align: center;
 }
 
-
+.user-name{
+  color: rgb(47, 104, 57);
+  font-family: verdana;
+  font-weight: bold;
+  font-size: 48px;
+}
 .text1{
   color: rgb(142, 168, 147);
   font-family: verdana;
