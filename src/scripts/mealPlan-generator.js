@@ -7,7 +7,6 @@ class MealPlan {
     this.fats = 0;
     this.breakfastList = [];
     this.lunchesAndDinnersList = [];
-    //this.suitableBreakfasts = [];
   }
 
   addMeal(meal, mealType) {
@@ -36,7 +35,6 @@ class MealPlan {
 
   static checkPreferences(allPreferences, mealIngredients) {
     let counter = 0;
-    //console.log(allPreferences.some((el) => mealIngredients.includes(el)).length);
     for (let i = 0; i < mealIngredients.length; i++) {
       const al = mealIngredients[i];
       if (allPreferences.includes(al)) {
@@ -300,19 +298,3 @@ function sortMeals(meals, mealType) {
 
   return filtered;
 }
-
-// funktsioonid ja muutujad õigesse järjekorda
-// 1. võta hommikusöögid ja õhtusöögid, eemalda allergiatega toidud
-// 2. lisa igale allesjäänud toidule rank
-// 3. sorti breakfastid ja lunches/dinners
-// 4. .innerHTML "best matching meal" vastavasse html sektsiooni (breakfasti ja lunches/dinneri esimene array liige (või viimane kui on asc order))
-// best matching meals on nagu nii ideal meal plan-is
-// 5. tee for loop nädalapäevade arvule ja injecti random hommikusöögid ja lõuna/õhtusöögid
-
-//hbr
-//scss
-//webpack/public folder
-
-// 1. klassis on funktsioon getUserAllergies
-// 2. kasutage seda funktsiooni, et kuvada useri allergied resultsis
-// 3. kasutage seda funktsiooni, et eemdalda allergitega toidud

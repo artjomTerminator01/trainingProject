@@ -1,6 +1,10 @@
 const path = require("path");
+
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const CopyPlugin = require("copy-webpack-plugin");
+
+// const publicFolder = path.join(__dirname, "public");
 
 module.exports = {
   mode: "development",
@@ -11,7 +15,7 @@ module.exports = {
   },
   output: {
     path: path.resolve(__dirname, "dist"),
-    filename: "[name].bundle.js",
+    filename: "[name].[contenthash].js",
     clean: true,
     assetModuleFilename: "[name][ext]",
   },
@@ -32,12 +36,7 @@ module.exports = {
       {
         test: /\.(sa|sc|c)ss$/,
         exclude: /node_modules/,
-        use: [
-          // MiniCssExtractPlugin.loader,
-          "style-loader",
-          "css-loader",
-          "sass-loader",
-        ],
+        use: ["style-loader", "css-loader", "sass-loader"],
       },
       {
         test: /\.js$/,
@@ -55,21 +54,28 @@ module.exports = {
     new HtmlWebpackPlugin({
       title: "main page",
       filename: "index.html",
-      template: "src/pages/index.html",
+      template: "src/html/index.html",
+      chunks: ["index"],
     }),
     new HtmlWebpackPlugin({
       title: "form",
       filename: "form.html",
-      template: "src/pages/form.html",
+      template: "src/html/pages/form.html",
+      chunks: ["form"],
     }),
     new HtmlWebpackPlugin({
       title: "result",
       filename: "result.html",
-      template: "src/pages/result.html",
+      template: "src/html/pages/result.html",
+      chunks: ["result"],
     }),
-    new MiniCssExtractPlugin({
-      filename: "dist/[name].css",
-      // chunkFilename: "[name].css"
-    }),
+
+    // new CopyPlugin({
+    //   patterns: [
+    //     {
+    //       // from: publicFolder,
+    //     },
+    //   ],
+    // }),
   ],
 };

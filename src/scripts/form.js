@@ -1,5 +1,8 @@
 import { hasNumber } from "./formsUtils.js";
-import "../styles/formStyle.scss";
+import "../styles/pages/formStyle.scss";
+import "../styles/base/style.scss";
+import "../styles/base/reboot.scss";
+import "../styles/base/navbar.scss";
 
 const form = document.getElementsByTagName("form")[0];
 
