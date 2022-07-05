@@ -12,25 +12,8 @@ window.addEventListener("load", () => {
   const height = params.get("height");
   const gender = params.get("gender");
   const activity = params.get("active");
-
-  // ?allergies['allergie']=chad
-
-  const lactose = params.get("lactose");
-  const nuts = params.get("nuts");
-  const eggs = params.get("eggs");
-  const gluten = params.get("gluten");
-  const soy = params.get("soy");
-  const fish = params.get("fish");
-
-  const prefPasta = params.get("pref-pasta");
-  const prefChicken = params.get("pref-chicken");
-  const prefEggs = params.get("pref-eggs");
-  const prefFish = params.get("pref-fish");
-  const prefRice = params.get("pref-rice");
-  const prefSoy = params.get("pref-soy");
-  const prefBanana = params.get("pref-banana");
-  const prefTomato = params.get("pref-tomato");
-  const prefPotato = params.get("pref-potato");
+  const allergies = params.getAll("allergie");
+  const preferences = params.getAll("pref");
 
   const calorieIntake = calculateCalories(
     age,
@@ -43,25 +26,10 @@ window.addEventListener("load", () => {
   const protein = ((calorieIntake * 0.3) / 4).toFixed(2);
   const fats = ((calorieIntake * 0.2) / 9).toFixed(2);
 
-  const allergies = [lactose, nuts, eggs, gluten, soy, fish];
-  const preferences = [
-    prefPasta,
-    prefChicken,
-    prefEggs,
-    prefFish,
-    prefRice,
-    prefSoy,
-    prefBanana,
-    prefTomato,
-    prefPotato,
-  ];
-
   const plan = generateMealPlan(calorieIntake, allergies, preferences);
 
   const dayMealPlan = plan[0];
   const weekMealPlan = plan[1];
-
-  console.log(dayMealPlan);
 
   document.getElementById("calories").innerHTML = calorieIntake.toFixed(2);
   document.getElementById("carbs").innerHTML = carbs;
@@ -107,9 +75,6 @@ window.addEventListener("load", () => {
         let text = document.createTextNode("BREAKFAST");
         cell.appendChild(text);
         for (let key in element) {
-          if (key == "fat") {
-            console.log("FATS " + element[key]);
-          }
           if (key != "score") {
             let cell = row.insertCell();
             let text = document.createTextNode(element[key]);
@@ -127,9 +92,6 @@ window.addEventListener("load", () => {
         let text = document.createTextNode("LUNCH OR DINNER");
         cell.appendChild(text);
         for (let key in element) {
-          if (key == "fat") {
-            console.log("FATS " + element[key]);
-          }
           if (key != "score") {
             let cell = row.insertCell();
             let text = document.createTextNode(element[key]);
@@ -143,7 +105,6 @@ window.addEventListener("load", () => {
 
 function calculateCalories(age, weight, height, gender, activity) {
   let activityMultiplier = 1;
-  console.log("ACTIVITY: " + activity);
   if (activity == "8-10") {
     activityMultiplier = 1.3;
   } else if (activity == "4-7") {
