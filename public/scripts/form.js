@@ -1,7 +1,5 @@
 import { hasNumber } from "./formsUtils.js";
 
-// var header = document.getElementById("navigation");
-
 const form = document.getElementsByTagName("form")[0];
 
 const email = document.getElementById("email");
