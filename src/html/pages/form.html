@@ -5,6 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous"
+    />
     <link rel="stylesheet" href="../styles/style.css" />
     <link rel="stylesheet" href="../styles/formStyle.css" />
     <link rel="stylesheet" href="../styles/navbar.css" />
@@ -16,17 +22,17 @@
     </div>
 
     <div class="container">
-      <div class="user-form">
-        <p class="text">
-          Input your info so we can choose the best diet for you
-        </p>
-        <p class="text">A diet will be calculated based on your physiology</p>
-        <form
-          class="main-form"
-          id="main-form"
-          action="result.html"
-          method="GET"
-        >
+      <div class="row">
+        <div class="description">
+          <p class="text1__grey">
+            Input your info so we can choose the best diet for you
+          </p>
+          <p class="text1__grey">
+            Diet will be calculated based on your physiology
+          </p>
+        </div>
+
+        <form class="col-md-7" id="main-form" action="result.html" method="GET">
           <div class="form-input">
             <label class="form-label" for="name">name</label>
             <input type="text" id="name" placeholder="your name" name="name" />
@@ -175,28 +181,31 @@
           </div>
           <button class="submit--button" type="submit">Submit</button>
         </form>
-
-        <div class="description">
+        <div class="col-md-5">
           <p class="header1">HOW THESE CALORIES ARE CALCULATED?</p>
-          <p class="text">Mifflin-St Jeor Equation:</p>
-          <p class="text">For men:</p>
-          <p class="text">
+          <p class="text1__grey">Mifflin-St Jeor Equation:</p>
+          <p class="text1__grey">For men:</p>
+          <p class="text1__grey">
             (10 * weight(kg) + 6.25 * height(cm) - 5 * age + 5) multiplier
           </p>
-          <p class="text">For women:</p>
-          <p class="text">
+          <p class="text1__grey">For women:</p>
+          <p class="text1__grey">
             (10 * weight(kg) + 6.25 * height(cm) - 5 * age - 161) multiplier
           </p>
-          <p class="text">0-3 activity level - 1 multiplier</p>
-          <p class="text">4-7 activity level - 1.15 multiplier</p>
-          <p class="text">8-10 activity level - 1.3 multiplier</p>
-          <p class="text">Carbs: calorie-intake * 0.5 / 4</p>
-          <p class="text">Proteins: calorie-intake * 0.3 / 4</p>
-          <p class="text">Fats: calorie-intake * 0.2 / 9</p>
+          <p class="text1__grey">0-3 activity level - 1 multiplier</p>
+          <p class="text1__grey">4-7 activity level - 1.15 multiplier</p>
+          <p class="text1__grey">8-10 activity level - 1.3 multiplier</p>
+          <p class="text1__grey">Carbs: calorie-intake * 0.5 / 4</p>
+          <p class="text1__grey">Proteins: calorie-intake * 0.3 / 4</p>
+          <p class="text1__grey">Fats: calorie-intake * 0.2 / 9</p>
         </div>
       </div>
     </div>
-
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+      crossorigin="anonymous"
+    ></script>
     <script type="module" src="../../scripts/form.js"></script>
   </body>
 </html>

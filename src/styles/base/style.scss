@@ -41,6 +41,13 @@ h2 {
     font-family: verdana;
     font-weight: bold;
   }
+
+  &__grey{
+    color: rgb(93, 107, 96);
+    font-family: verdana;
+    font-weight: bold;
+    font-size: 14px;
+  }
 }
 
 input[type='text'] {
