@@ -5,29 +5,39 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous"
+    />
   </head>
   <body>
     <div class="hero">
       <h1>dietChad.com</h1>
       <p class="hero__text">STOP BEING A FAT VIRGIN, BECOME A DIETCHAD</p>
     </div>
+
     <div class="container">
-      <div class="button">
-        <a href="form.html">
-          <button class="button__button">FILL THE FORM</button>
-        </a>
+      <div class="row d-flex justify-content-center">
+        <div class="button">
+          <a href="form.html">
+            <button class="button__button">FILL THE FORM</button>
+          </a>
+        </div>
+        <div class="col-md-8">
+          <p class="text1">
+            Obesity in the United States is a major health issue resulting in
+            numerous diseases, specifically increased risk of certain types of
+            cancer, coronary artery disease, type 2 diabetes, stroke,
+            cardiovascular disease, as well as significant increases in early
+            mortality and economic costs.
+          </p>
+        </div>
       </div>
 
-      <p class="text1">
-        Obesity in the United States is a major health issue resulting in
-        numerous diseases, specifically increased risk of certain types of
-        cancer, coronary artery disease, type 2 diabetes, stroke, cardiovascular
-        disease, as well as significant increases in early mortality and
-        economic costs.
-      </p>
-
-      <div class="users">
-        <div>
+      <div class="row">
+        <div class="col-md-4">
           <p class="text1__green">OBAMA</p>
           <img
             class="users__image"
@@ -39,7 +49,7 @@
             of...
           </p>
         </div>
-        <div>
+        <div class="col-md-4">
           <p class="text1__green">THE WOCK</p>
           <img
             class="users__image"
@@ -49,7 +59,7 @@
             Obesity in the United States is a major health issue resulting in...
           </p>
         </div>
-        <div>
+        <div class="col-md-4">
           <p class="text1__green">FARMER</p>
           <img
             class="users__image"
@@ -62,14 +72,13 @@
         </div>
       </div>
 
-      <div class="subscription">
-        <div class="subscription__price__box">
-          <div class="subscription__price__box__title">MONTH SUBSCRIPTION:</div>
-          <div class="subscription__price__box__price">49$</div>
+      <div class="row d-flex justify-content-center">
+        <div class="col-md-8">
+          <div class="subscription__title">MONTH SUBSCRIPTION:</div>
+          <div class="subscription__price">49$</div>
         </div>
-
-        <div class="subscription__box">
-          <div class="subscription__box__contains">
+        <div class="col-md-4">
+          <div class="subscription__contains">
             <p class="title2">SUBSCRIPTION CONTAINS:</p>
           </div>
           <div>
@@ -79,19 +88,20 @@
         </div>
       </div>
 
-      <div class="pdf">
-        <div class="pdf__icon">
+      <div class="row d-flex justify-content-center">
+        <div class="col-4">
           <a
             href="http://www.africau.edu/images/default/sample.pdf"
             target="_blank"
           >
             <img
+              class="pdf__icon"
               src="https://cdn4.iconfinder.com/data/icons/logos-and-brands/512/27_Pdf_File_Type_Adobe_logo_logos-512.png"
               width="250"
             />
           </a>
         </div>
-        <div class="pdf__description">
+        <div class="col-3">
           <p class="title2">EXAMPLE MEAL PLAN</p>
           <p>-Everyday meal plan</p>
           <p>-Everyday training plan</p>
@@ -118,5 +128,10 @@
     </footer>
 
     <script src="../dist/main.bundle.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>

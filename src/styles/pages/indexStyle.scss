@@ -14,7 +14,9 @@
     margin-top: 128px;
     font-family: verdana;
   }
+
 }
+
 
 .button{
 	margin-top: 36px;
@@ -42,81 +44,47 @@
 }
 
 .users {
-	text-align: center;
-	display: flex;
-	flex-direction: row;
-	justify-content: space-around;
-	flex-wrap: wrap;
-
   &__image{
     width: 200px;
     height: 200px;
     border-radius: 50%;
-    display: flex;
   }
 
   &__text{
-    display: flex;
-    width: 200px;
-    margin-right: 16px;
+    margin-top: 16px;
+    margin-bottom: 64px;
+    text-align: center;
   }
 }
 
 
 
 .subscription{
-  &__price__box{
+  &__title{
+    font-family: verdana;
+    font-size: 48px;
     display: inline-block;
-    vertical-align: top;
-    &__title{
-      font-family: verdana;
-      font-size: 48px;
-      display: inline-block;
-    }
-    &__price{
-      color: rgb(47, 90, 54);
-      font-family: verdana;
-      font-size: 64px;
-      display: inline-block;
-      font-weight: bold;
-    }
+  }
+  &__price{
+    color: rgb(47, 90, 54);
+    font-family: verdana;
+    font-size: 64px;
+    display: inline-block;
+    font-weight: bold;
   }
 
-  &__box{
+  &__contains{
     display: inline-block;
     vertical-align: top;
-    margin-left: 96px;
-    text-align: center;
-
-    &__contains{
-      display: inline-block;
-      vertical-align: top;
-    }
   }
-}
-
-.pdf{
-	margin-top: 32px;
-	text-align: center;
-  &__icon{
-    display: inline-block;
-    vertical-align: top;
-    &:hover {
-      opacity: 0.6;
-    }
-  }
-
-  &__description{
-    display: inline-block;
-    vertical-align: top;
-    text-align: center;
-    margin-top: 24px;
-    margin-left: 64px;
-  }
-
 
 }
 
-
-
+.pdf__icon{
+  display: inline-block;
+  vertical-align: top;
+  &:hover {
+    opacity: 0.6;
+  }
+}
 
