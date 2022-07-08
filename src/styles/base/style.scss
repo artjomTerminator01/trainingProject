@@ -19,9 +19,26 @@ h1 {
 
 h2 {
   color: rgb(101, 118, 106);
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
-    'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-family: 'Verdana';
   font-size: 100%;
+}
+
+.title2{
+	color: rgb(47, 90, 54);
+	font-family: verdana;
+	font-size: 20px;
+  font-weight: bold;
+}
+
+.text1 {
+	font-family: verdana;
+	font-weight: bold;
+
+  &__green{
+    color: rgb(47, 90, 54);
+    font-family: verdana;
+    font-weight: bold;
+  }
 }
 
 input[type='text'] {
@@ -37,29 +54,32 @@ input[type='text'] {
   color: white;
   margin-top: 64px;
 
+  &__text {
+    display: inline-block;
+    margin-left: 16px;
+    font-family: Verdana;
+    height: 32px;
+    font-weight: bold;
+  }
+
+  &__github{
+    text-align: center;
+
+    &__icon{
+      margin-bottom: 8px;
+
+      &:hover{
+        opacity: 0.6;
+
+      }
+
+    }
+  }
+
+
+
 }
 
-.footer-text{
-  display: inline-block;
-  margin-left: 16px;
-  font-family: Verdana;
-  height: 32px;
-}
 
-.github{
-  text-align: center;
-}
 
-.git-icon{
-  margin-bottom: 8px;
-}
-
-.git-icon:hover{
-  opacity: 0.6;
-}
-
-.footer-text{
-  font-family: verdana;
-  font-weight: bold;
-}
 

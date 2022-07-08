@@ -1,7 +1,6 @@
 import { generateMealPlan } from "./mealPlan-generator.js";
 import "../styles/pages/resultStyle.scss";
 import "../styles/base/style.scss";
-import "../styles/base/reboot.scss";
 import "../styles/base/navbar.scss";
 
 window.addEventListener("load", () => {

@@ -1,5 +1,5 @@
 
-.submit-button{
+.submit--button{
   background-color: rgb(47, 90, 54);
   color: white;
   font-family: verdana;
@@ -13,22 +13,16 @@
   margin-top: 24px;
   margin-bottom: 24px;
   width: 50%;
+  &:hover{
+    background-color: rgb(47, 104, 57);
+    cursor: pointer;
+  }
+  &active{
+    background-color: black;
+  }
 }
 
-.submit-button:hover{
-  background-color: rgb(47, 104, 57);
-  cursor: pointer;
 
-}
-
-.submit-button:active{
-  background-color: black;
-}
-
-.form:hover{
-  background-color: rgb(47, 104, 57);
-  cursor: pointer;
-}
 
 .form:active{
   background-color: black;
